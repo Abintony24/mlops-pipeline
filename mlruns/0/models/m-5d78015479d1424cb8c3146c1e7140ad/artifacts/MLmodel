@@ -1,0 +1,24 @@
+artifact_path: file:C:/Users/abint/OneDrive/Documents/mlops project2/scripts/mlruns/0/models/m-5d78015479d1424cb8c3146c1e7140ad/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.skops
+    predict_fn: predict
+    python_version: 3.13.1
+  sklearn:
+    code: null
+    pickled_model: model.skops
+    serialization_format: skops
+    sklearn_version: 1.9.1
+    skops_trusted_types:
+    - sklearn.tree._tree.Tree
+mlflow_version: 3.18.0
+model_id: m-5d78015479d1424cb8c3146c1e7140ad
+model_size_bytes: 1833853
+model_uuid: m-5d78015479d1424cb8c3146c1e7140ad
+prompts: null
+run_id: 58d01a066c1d4da1802fc35211fd56d6
+utc_time_created: '2026-11-17 12:48:20.955360'
