@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+scikit-learn
+pandas==3.0.6
+mlflow
+pydantic
+evidently
+requests
