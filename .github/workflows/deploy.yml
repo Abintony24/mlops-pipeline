@@ -39,17 +39,3 @@ jobs:
           docker build -t abintony/iris-mlops-api:latest .
           docker push abintony/iris-mlops-api:latest
 
-      - name: Deploy Container to Linux VM
-        uses: appleboy/ssh-action@v1.2.0
-        with:
-          host: ${{ secrets.VM_HOST }}
-          username: ${{ secrets.VM_USER }}
-          key: ${{ secrets.VM_SSH_KEY }}
-          script: |
-            docker pull abintony/iris-mlops-api:latest
-            docker stop iris-api || true
-            docker rm iris-api || true
-            docker run -d \
-              --name iris-api \
-              -p 8000:8000 \
-              abintony/iris-mlops-api:latest
